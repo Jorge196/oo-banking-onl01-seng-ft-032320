@@ -12,6 +12,7 @@ class Transfer
     @status = "pending"
   end
 
+
   def valid?
     @sender.valid? && @receiver.valid? ? true : false
   end
@@ -24,7 +25,6 @@ class Transfer
     else
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
-    end
   end
 
 
